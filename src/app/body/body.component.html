@@ -1,13 +1,9 @@
 <mat-grid-list cols="4" rowHeight="110px">
   <mat-grid-tile colspan="4">
-    <div class="inputRow">
-      <app-title-select></app-title-select>
-      <app-date-select></app-date-select>
-      <div>
-        <button class="fetchBtn" mat-raised-button color="primary">Fetch Data</button>
-      </div>
-    </div>
+    <app-form></app-form>
   </mat-grid-tile>
-  <mat-grid-tile>
+  <mat-divider></mat-divider>
+  <mat-grid-tile colspan="2" rowspan="5">
+    <app-table></app-table>
   </mat-grid-tile>
 </mat-grid-list>

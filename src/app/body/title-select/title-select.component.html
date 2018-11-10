@@ -1,9 +1,0 @@
-
-<mat-form-field>
-  <input matInput type="text" aria-label="Number"  [formControl]="myControl" [matAutocomplete]="auto" placeholder="Career Title">
-  <mat-autocomplete #auto="matAutocomplete">
-    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-      {{option}}
-    </mat-option>
-  </mat-autocomplete>
-</mat-form-field>

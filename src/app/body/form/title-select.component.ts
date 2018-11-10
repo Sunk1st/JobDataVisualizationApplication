@@ -6,7 +6,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material';
 
 @Component({
-  selector: 'app-title-select',
+  selector: 'app-form',
   templateUrl: './title-select.component.html',
   styleUrls: ['./title-select.component.css']
 })

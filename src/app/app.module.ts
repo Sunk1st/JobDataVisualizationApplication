@@ -6,10 +6,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from './angular-material.module';
 
 import { AppComponent } from './app.component';
-import { TitleSelectComponent } from './body/title-select/title-select.component';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
-import { DateSelectComponent } from './body/date-select/date.select.component';
+import { TitleSelectComponent } from './body/form/title-select.component';
+import { TableComponent } from './body/table/table.component';
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import { DateSelectComponent } from './body/date-select/date.select.component';
     TitleSelectComponent,
     HeaderComponent,
     BodyComponent,
-    DateSelectComponent
+    TableComponent
   ],
   imports: [
     AngularMaterialModule,
