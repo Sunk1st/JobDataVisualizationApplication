@@ -1,3 +1,11 @@
-.test1 {
-  background-color: blue;
+.btnMargin {
+  margin-left: 3rem;
+}
+
+.fetchBtn {
+  margin-top: 11px;
+}
+
+.inputRow {
+  display: flex;
 }

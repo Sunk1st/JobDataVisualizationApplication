@@ -1,16 +1,12 @@
-<mat-grid-list cols="1" rowHeight="110px">
-  <mat-grid-tile>
-    <app-title-select></app-title-select>
-    <mat-form-field>
-      <input matInput [matDatepicker]="startPicker" placeholder="Choose a Starting Date">
-      <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
-      <mat-datepicker #startPicker></mat-datepicker>
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput [matDatepicker]="endPicker" placeholder="Choose an Ending Date">
-      <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
-      <mat-datepicker #endPicker></mat-datepicker>
-    </mat-form-field>
+<mat-grid-list cols="4" rowHeight="110px">
+  <mat-grid-tile colspan="4">
+    <div class="inputRow">
+      <app-title-select></app-title-select>
+      <app-date-select></app-date-select>
+      <div>
+        <button class="fetchBtn" mat-raised-button color="primary">Fetch Data</button>
+      </div>
+    </div>
   </mat-grid-tile>
   <mat-grid-tile>
   </mat-grid-tile>
