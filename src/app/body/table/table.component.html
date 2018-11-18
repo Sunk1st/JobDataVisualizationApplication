@@ -1,28 +1,60 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tableWidth">
-  <!-- Position Column -->
-  <ng-container matColumnDef="position">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
-    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+<table mat-table [dataSource]="test" class="mat-elevation-z8 tableWidth">
+  <ng-container matColumnDef="blsEmploymentMay2018">
+    <th mat-header-cell *matHeaderCellDef> BLS Employ 2018</th>
+    <td mat-cell *matCellDef="let report"> {{report.blsEmploymentMay2018}} </td>
   </ng-container>
-
-  <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef> Name </th>
-    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  <ng-container matColumnDef="blsEmploymentPerThousandMay2018">
+    <th mat-header-cell *matHeaderCellDef> BLS Employ Thous. 2018</th>
+    <td mat-cell *matCellDef="let report"> {{report.blsEmploymentPerThousandMay2018}} </td>
   </ng-container>
-
-  <!-- Weight Column -->
-  <ng-container matColumnDef="weight">
-    <th mat-header-cell *matHeaderCellDef> Weight </th>
-    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+  <ng-container matColumnDef="blsMeanWageMay2018">
+    <th mat-header-cell *matHeaderCellDef> BLS Mean Wage 2018</th>
+    <td mat-cell *matCellDef="let report"> {{report.blsMeanWageMay2018}} </td>
   </ng-container>
-
-  <!-- Symbol Column -->
-  <ng-container matColumnDef="symbol">
-    <th mat-header-cell *matHeaderCellDef> Symbol </th>
-    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+  <ng-container matColumnDef="day">
+    <th mat-header-cell *matHeaderCellDef>Day</th>
+    <td mat-cell *matCellDef="let report"> {{report.day}} </td>
   </ng-container>
-
+  <ng-container matColumnDef="glassdoorJobs">
+    <th mat-header-cell *matHeaderCellDef>Glassdoor Jobs</th>
+    <td mat-cell *matCellDef="let report"> {{report.glassdoorJobs}} </td>
+  </ng-container>
+  <ng-container matColumnDef="glassdoorSalary">
+    <th mat-header-cell *matHeaderCellDef>Glassdoor Salary</th>
+    <td mat-cell *matCellDef="let report"> {{report.glassdoorSalary}} </td>
+  </ng-container>
+  <ng-container matColumnDef="glassdoorSalarySamples">
+    <th mat-header-cell *matHeaderCellDef>Glassdoor Salary Sample</th>
+    <td mat-cell *matCellDef="let report"> {{report.glassdoorSalarySamples}} </td>
+  </ng-container>
+  <ng-container matColumnDef="indeedJobs">
+    <th mat-header-cell *matHeaderCellDef>Indeed Jobs</th>
+    <td mat-cell *matCellDef="let report"> {{report.indeedJobs}} </td>
+  </ng-container>
+  <ng-container matColumnDef="indeedSalary">
+    <th mat-header-cell *matHeaderCellDef>Indeed Salary</th>
+    <td mat-cell *matCellDef="let report"> {{report.indeedSalary}} </td>
+  </ng-container>
+  <ng-container matColumnDef="indeedSalarySamples">
+    <th mat-header-cell *matHeaderCellDef>Indeed Salary Samples</th>
+    <td mat-cell *matCellDef="let report"> {{report.indeedSalarySamples}} </td>
+  </ng-container>
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef>Career Title</th>
+    <td mat-cell *matCellDef="let report"> {{report.title}} </td>
+  </ng-container>
+  <ng-container matColumnDef="metro">
+    <th mat-header-cell *matHeaderCellDef>Metro Area</th>
+    <td mat-cell *matCellDef="let report"> {{report.metro}} </td>
+  </ng-container>
+  <ng-container matColumnDef="month">
+    <th mat-header-cell *matHeaderCellDef>Month</th>
+    <td mat-cell *matCellDef="let report"> {{report.month}} </td>
+  </ng-container>
+  <ng-container matColumnDef="year">
+    <th mat-header-cell *matHeaderCellDef>Year</th>
+    <td mat-cell *matCellDef="let report"> {{report.year}} </td>
+  </ng-container>
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
