@@ -8,7 +8,7 @@ import { AngularMaterialModule } from './angular-material.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
-import { TitleSelectComponent } from './body/form/title-select.component';
+import { TitleSelectComponent } from './body/form/form-select.component';
 import { TableComponent } from './body/table/table.component';
 
 

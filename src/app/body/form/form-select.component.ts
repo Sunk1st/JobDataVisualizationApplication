@@ -1,28 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
-import { DomSanitizer } from '@angular/platform-browser';
-import { MatIconRegistry } from '@angular/material';
+import { CareerService } from '../career-service.service';
 
 @Component({
   selector: 'app-form',
-  templateUrl: './title-select.component.html',
-  styleUrls: ['./title-select.component.css']
+  templateUrl: './form-select.component.html',
+  styleUrls: ['./form-select.component.css']
 })
 export class TitleSelectComponent implements OnInit {
-  myControl = new FormControl();
   options: string[] = ['Registered Nurse', 'Elementary Teacher'];
   filteredOptions: Observable<string[]>;
 
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-    iconRegistry.addSvgIcon(
-      'career',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/img/jobIcon.svg'));
-  }
+  searchForm = this.formBuilder.group({
+    title: [''],
+    startingDate: [''],
+    endingDate: ['']
+  });
+  constructor(private careerService: CareerService, private formBuilder: FormBuilder) {}
 
   ngOnInit() {
-    this.filteredOptions = this.myControl.valueChanges
+    this.filteredOptions = this.searchForm.controls.title.valueChanges
       .pipe(
         startWith(''),
         map(value => this._filter(value))
@@ -31,7 +30,10 @@ export class TitleSelectComponent implements OnInit {
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
-
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
+  }
+
+  onSubmit() {
+    console.log(this.searchForm);
   }
 }

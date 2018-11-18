@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TitleSelectComponent } from './title-select.component';
+import { TitleSelectComponent } from './form-select.component';
 
 describe('TitleSelectComponent', () => {
   let component: TitleSelectComponent;

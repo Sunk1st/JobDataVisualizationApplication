@@ -8,7 +8,7 @@ import { MatFormFieldModule,
          MatInputModule,
          MatNativeDateModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
-
+import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -23,6 +23,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatIconModule,
     MatInputModule,
     MatNativeDateModule,
+    MatSelectModule,
     MatTableModule,
     MatToolbarModule
   ]
